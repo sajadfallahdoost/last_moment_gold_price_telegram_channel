@@ -1,14 +1,20 @@
 [tool.poetry]
-name = "last-moment-gold-price-telegram-channel copy"
+name = "last_moment_gold_price_telegram_channel"
 version = "0.1.0"
 description = ""
-authors = ["sajad <fallahdoostsajad@gmal.com>"]
+authors = ["sajad <fallahdoostsajad@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-
+requests = "^2.32.3"
+python-telegram-bot = "^21.5"
+schedule = "^1.2.2"
+setuptools = "^74.1.2"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start-scheduler = "last_moment_gold_price.scheduler:start_scheduler"
